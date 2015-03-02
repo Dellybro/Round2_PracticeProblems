@@ -5,7 +5,7 @@ def nearest_larger(arr, idx)
     elsif arr[idx+1] > arr[idx]
       return idx+1
     else
-      return true
+      return idx
     end
   end
 

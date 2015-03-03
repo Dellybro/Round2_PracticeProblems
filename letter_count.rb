@@ -3,7 +3,7 @@ def letter_count(str)
 
   idx = 0
   while idx < str.length
-    hash[str[idx]]+=1 unless str[idx] == " "
+    hash[str[idx]]+=1 if str[idx] != " "
     idx+=1
   end
   hash

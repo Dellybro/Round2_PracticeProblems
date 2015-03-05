@@ -28,13 +28,12 @@ MORSE_CODE = {
 }
 
 def morse_encode(str)
-  idx = 0
+  words = str.split("")
   result = ""
-  while idx < str.length
-    result << " " if str[idx] == " "
-    result << MORSE_CODE[str[idx]].to_s << " " unless str[idx] == " "
-    idx+=1
-  end
+  words.map{ |idx|
+    result << " " if idx == " "
+    result << MORSE_CODE[idx].to_s << " " unless idx == " "
+  }
   result
 end
 
